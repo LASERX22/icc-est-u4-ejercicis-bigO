@@ -1,14 +1,22 @@
 package main.ejercicio2;
 
+import java.util.HashSet;
+
 public class RespuestasOptimizadas {
     // El estudiante debe escribir aquí las versiones optimizadas y las
     // complejidades
 
     // 1. Versión optimizada de tieneDuplicados (Complejidad anotada en la variable)
-    public static String tieneDuplicadosComplejidad = ""; // Ej: "O(n)"
+    public static String tieneDuplicadosComplejidad = "O(n)"; // Ej: "O(n)"
 
     public static boolean tieneDuplicadosOpt(int[] arr) {
-        // TODO: implementar versión eficiente
+        HashSet<Integer> set = new HashSet<>();
+        for (int num : arr) {
+            if (set.contains(num)) {
+                return true; // Duplicado encontrado
+            }
+            set.add(num);
+        }
         return false;
     }
 
