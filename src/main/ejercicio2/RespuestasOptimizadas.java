@@ -24,7 +24,12 @@ public class RespuestasOptimizadas {
     public static String contarMayoresComplejidad = ""; // Ej: "O(n)"
 
     public static int contarMayoresOpt(int[] arr, int x) {
-        // TODO: implementar versión eficiente
+        int count = 0;
+        for (int num : arr) {
+            if (num > x) {
+                count++;
+            }
+        }
         return 0;
     }
 
@@ -32,7 +37,12 @@ public class RespuestasOptimizadas {
     public static String encontrarMaximoComplejidad = ""; // Ej: "O(n)"
 
     public static int encontrarMaximoOpt(int[] arr) {
-        // TODO: implementar versión eficiente
+        int max = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
         return 0;
     }
 }
